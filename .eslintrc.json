@@ -1,42 +1,46 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "extends": [
-        "react-app",
-        "plugin:react/recommended",
-        "standard-with-typescript",
-        "plugin:import/typescript",
-        "plugin:tailwindcss/recommended",
-        "plugin:prettier/recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": "latest",
-        "sourceType": "module",
-        "project": "./tsconfig.json"
-    },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "tailwindcss",
-        "prettier"
-    ],
-    "rules": {
-        "react/react-in-jsx-scope": ["off"],
-        "react/jsx-uses-react": ["off"],
-        "react/jsx-props-no-spreading": ["warn"],
-        "react/no-unescaped-entities": ["off"],
-        "tailwindcss/classnames-order": "warn",
-        "tailwindcss/enforces-negative-arbitrary-values": "warn",
-        "tailwindcss/enforces-shorthand": "warn",
-        "tailwindcss/migration-from-tailwind-2": "warn",
-        "tailwindcss/no-arbitrary-value": "off",
-        "tailwindcss/no-custom-classname": "warn",
-        "tailwindcss/no-contradicting-classname": "error"
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:tailwindcss/recommended",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2022,
+    "sourceType": "module",
+    "project": "tsconfig.json",
+    "ecmaFeatures": {
+      "jsx": true
     }
+  },
+  "plugins": ["react", "import", "jsx-a11y", "@typescript-eslint"],
+  "rules": {
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "@typescript-eslint/no-empty-function": 0
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  }
 }
