@@ -24,14 +24,11 @@ const Scanner: React.FC = () => {
         </div>
         <div className="container mx-auto px-6 pt-12 pb-80 md:pb-96">
           <ul className="flex w-full flex-col space-y-8">
-            {/* {getStocks.data?.data.stocks.map(
+            {getStocks.data?.data.stocks.slice(0, 10).map(
               (backtest: MarketResponseResult) => (
-                <BacktestCard id={backtest.id} />
+                <BacktestCard key={backtest.id} id={backtest.id} />
               )
-            )} */}
-
-             <BacktestCard id={getStocks.data?.data.stocks[0].id} />
-            
+            )}
           </ul>
         </div>
       </section>
