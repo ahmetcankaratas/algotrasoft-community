@@ -18,6 +18,9 @@ module.exports = {
         sans: ['Raleway', 'sans-serif'],
         opensans: ['Open Sans', 'sans-serif'],
       },
+      backgroundImage: {
+        'scanner-cover': "url('./assets/images/bg-scanner-cover.webp)",
+      }
     },
   },
   plugins: [],

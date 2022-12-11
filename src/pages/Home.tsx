@@ -1,11 +1,10 @@
 import Hero from "../components/Hero/Hero";
-import Header from "../components/Layout/Header";
+import Layout from "../components/Layout/Layuot";
 const Home: React.FC = () => {
   return (
-    <>
-      <Header />
+    <Layout>
       <Hero />
-    </>
+    </Layout>
   );
 };
 

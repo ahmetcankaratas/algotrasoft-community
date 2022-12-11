@@ -1,5 +1,4 @@
-import { useState } from "react";
-import Particle from "../Particle";
+import { Link } from "react-router-dom";
 import useDarkSide from "../../hooks/useDarkSide";
 const Header: React.FC = () => {
   const [colorTheme, setTheme] = useDarkSide();
@@ -10,26 +9,24 @@ const Header: React.FC = () => {
 
   return (
     <header className="container mx-auto mt-10 h-40 px-6 text-center md:h-20">
-      {/* Logo */}
 
-      {/* Menu */}
       <div className="top-12 right-12 flex items-center justify-center space-x-4 md:absolute md:space-x-10">
-        <a href="#" className="tracking-widest  hover:text-accentCyan">
+        <Link to="/" className="tracking-widest  hover:text-accentCyan">
           Home
-        </a>
-        <a href="#" className="tracking-widest  hover:text-accentCyan">
+        </Link>
+        <Link to="/scanner" className="tracking-widest  hover:text-accentCyan">
           Scanner
-        </a>
-        <a href="#" className="tracking-widest  hover:text-accentCyan">
+        </Link>
+        <Link to="/contact" className="tracking-widest  hover:text-accentCyan">
           Contact
-        </a>
-        {/* Mode Button*/}
+        </Link>
+
         <button
           id="theme-toggle"
           className="none 5 rounded-lg p-2 text-sm text-gray-500 hover:bg-gray-100 focus:outline focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:ring-gray-700 dark:hover:bg-gray-700"
           onClick={toggleDarkMode}
         >
-          {/* Dark SVG Icon */}
+
           <svg
             id="theme-toggle-dark-icon"
             className={`${colorTheme === "light" ? "hidden" : ""} h-5 w-5`}
@@ -40,7 +37,7 @@ const Header: React.FC = () => {
             <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
           </svg>
 
-          {/* Light SVG Icon */}
+  
           <svg
             id="theme-toggle-light-icon"
             className={`${colorTheme === "dark" ? "hidden" : ""} h-5 w-5`}

@@ -7,9 +7,6 @@ import Home from "./pages/Home";
 import Scanner from "./pages/Scanner";
 function App(): React.ReactElement {
   return (
-    <div
-      className={`mx-auto min-h-screen w-full py-2 font-opensans dark:bg-darkBlue dark:text-white`}
-    >
       <QueryClientProvider client={queryClient}>
         <BrowserRouter>
           <Routes>
@@ -18,7 +15,6 @@ function App(): React.ReactElement {
           </Routes>
         </BrowserRouter>
       </QueryClientProvider>
-    </div>
   );
 }
 
