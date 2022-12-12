@@ -22,7 +22,7 @@ const BacktestCard: React.FC<BacktestCardProps> = ({id}) => {
     }
 
     return <li className="flex flex-row justify-between p-10 rounded-lg bg-gray-100 dark:bg-darkBlue3"><div className="flex flex-col space-y-3">
-        <Link to={`/${id-1}`} className="text-2xl font-bold">{backtest.data?.data.name}</Link>
+        <Link to={`/scanner/${id-1}`} className="text-2xl font-bold">{backtest.data?.data.name}</Link>
         <h4 className="text-xl">{backtest.data?.data.symbol}</h4>
         </div>
         <div className="flex flex-col space-y-3">

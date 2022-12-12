@@ -17,7 +17,7 @@ function App(): React.ReactElement {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/scanner" element={<Scanner />} />
-            <Route path="/:backtest" element={<Backtest />} />
+            <Route path="/scanner/:backtest" element={<Backtest />} />
           </Routes>
         </BrowserRouter>
       </AppStateProvider>
