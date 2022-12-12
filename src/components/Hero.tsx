@@ -1,11 +1,10 @@
 import React from "react";
 import Typed from "react-typed";
-import Particle from "../Particle";
+import Particle from "./Particle";
 
 const Hero: React.FC = () => {
   return (
     <section id="hero">
-    <Particle />
       <div className="container mx-auto mt-[-96px] flex h-screen w-full max-w-4xl flex-col justify-center text-center">
         <p className="p-2 font-bold text-darkCyan">ALGOTRASOFT</p>
         <h1 className="text-4xl font-bold sm:text-6xl md:py-6">
@@ -26,9 +25,9 @@ const Hero: React.FC = () => {
         <p className="text-xl font-bold text-gray-500 md:text-2xl">
           Join the Quantitative Revolution
         </p>
-        <button className="my-6 mx-auto w-[200px] rounded-md bg-darkCyan py-3 font-medium">
-          Get Started
-        </button>
+        <a href="#collabration" className="my-6 px-8 py-2 shadow-md mx-auto w-xl rounded-md bg-darkCyan font-lg hover:scale-95">
+          Learn More
+        </a>
       </div>
     </section>
   );
