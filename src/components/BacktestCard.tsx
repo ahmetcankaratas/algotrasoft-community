@@ -1,5 +1,4 @@
-import { useQuery } from "react-query";
-import scannerApi from "../api/backtest";
+import Loader from "./Loader";
 import { Link } from "react-router-dom";
 import useFindBacktest from "../hooks/useFindBacktest";
 
@@ -8,11 +7,13 @@ type BacktestCardProps = {
 }
 
 const BacktestCard: React.FC<BacktestCardProps> = ({id}) => {
-    
+
     const backtest = useFindBacktest(id);
 
     if(backtest.isLoading) {
-        return <li>loading</li>
+        return <li className="w-full h-28 bg-gray-100 dark:bg-darkBlue3 rounded-lg p-4 flex justify-center items-center">
+            <Loader />
+        </li>
     }
 
     return <li className="flex flex-row justify-between p-10 rounded-lg bg-gray-100 dark:bg-darkBlue3"><div className="flex flex-col space-y-3">
