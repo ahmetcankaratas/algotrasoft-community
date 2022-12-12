@@ -1,4 +1,8 @@
+import { useApp } from "../states/AppState";
+
 const Search: React.FC = () => {
+    const { searchQuery, setSearchQuery } = useApp();
+
     return (
         <div className="px-6 md:px-0">
             <div className="container max-w-4xl mx-auto p-10 px-6 space-y-6 text-center rounded-lg bg-gray-200 dark:bg-darkBlue1 md:px-16">
@@ -6,7 +10,9 @@ const Search: React.FC = () => {
             <div className="w-full md:flex-1">
             <input
               type="text"
-              className="w-full px-10 py-3 rounded-full focus:outline-none"
+              className="w-full px-10 py-3 rounded-full focus:outline-none dark:text-black"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Enter Stock Name"
             />
           </div>
