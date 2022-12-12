@@ -5,7 +5,7 @@ import BacktestCard from "../components/BacktestCard";
 import Layout from "../components/Layout/Layuot";
 import { useApp } from "../states/AppState";
 import Loader from "../components/Loader";
-
+import Search from "../components/Search";
 const Scanner: React.FC = () => {
   const {getStocks} = useApp();
 
@@ -24,8 +24,8 @@ const Scanner: React.FC = () => {
             </div>
         </div>
         <div className="container mx-auto px-6 pt-12 pb-80 md:pb-96">
-          <ul className="flex w-full flex-col space-y-8">
-            {getStocks.isLoading && loading}
+          {getStocks.isLoading ? loading : <Search />}
+          <ul className="flex w-full flex-col space-y-8 mt-8">
             {getStocks.data?.data.stocks.map(
               (backtest: MarketResponseResult) => (
                 <InView key={backtest.name} rootMargin="200px 0px" threshold={0.3} triggerOnce={true}>
