@@ -1,13 +1,11 @@
-import { useQuery } from "react-query";
 import { MarketResponseResult } from "../@types/api";
-import scannerApi from "../api/backtest";
+
 import BacktestCard from "../components/BacktestCard";
 import Layout from "../components/Layout/Layuot";
+import { useApp } from "../states/AppState";
 
 const Scanner: React.FC = () => {
-  const getStocks = useQuery("backtests", () => {
-    return scannerApi.getStocks();
-  });
+  const {getStocks} = useApp();
 
   if (getStocks.isLoading) {
     return <div>loading</div>;
@@ -19,7 +17,7 @@ const Scanner: React.FC = () => {
         <div className="flex justify-center items-center w-full h-96 bg-scanner-cover')]">
             <div className="text-center space-y-5">
             <h1 className="bold text-6xl">Scanner</h1>
-            <p className="px-5 text-xl">Exclusive Search Engine <span className="text-darkCyan">for</span> <br/> Backtesting Trading Strategies Results</p>
+            <p className="px-5 text-xl">Search Engine for Trading Strategies <span className="text-darkCyan">Results</span>  </p>
             </div>
         </div>
         <div className="container mx-auto px-6 pt-12 pb-80 md:pb-96">

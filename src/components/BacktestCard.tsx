@@ -1,18 +1,16 @@
 import { useQuery } from "react-query";
 import scannerApi from "../api/backtest";
 import { Link } from "react-router-dom";
+import useFindBacktest from "../hooks/useFindBacktest";
 
 type BacktestCardProps = {
     id: number;
 }
 
 const BacktestCard: React.FC<BacktestCardProps> = ({id}) => {
-    console.log(id)
-    const backtest = useQuery(["backtest",id], () => {
-        return scannerApi.getBacktest(id);
-    })
+    
+    const backtest = useFindBacktest(id);
 
-    console.log(backtest)
     if(backtest.isLoading) {
         return <li>loading</li>
     }

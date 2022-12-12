@@ -1,14 +1,18 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { QueryClient, QueryClientProvider } from "react-query";
 
-const queryClient = new QueryClient();
+import { AppStateProvider } from "./states/AppState";
+
 
 import Home from "./pages/Home";
 import Scanner from "./pages/Scanner";
 import Backtest from "./pages/Backtest";
+
+const queryClient = new QueryClient();
 function App(): React.ReactElement {
   return (
-      <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={queryClient}>
+      <AppStateProvider>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -16,7 +20,8 @@ function App(): React.ReactElement {
             <Route path="/:backtest" element={<Backtest />} />
           </Routes>
         </BrowserRouter>
-      </QueryClientProvider>
+      </AppStateProvider>
+    </QueryClientProvider>
   );
 }
 

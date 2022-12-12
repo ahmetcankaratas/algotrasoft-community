@@ -1,17 +1,10 @@
-import { useQuery } from "react-query"
 import { useParams } from "react-router-dom"
-import scannerApi from "../api/backtest"
+import useFindBacktest from "../hooks/useFindBacktest"
 
 const Backtest: React.FC = () => {
     const { backtest: backtestId } = useParams()
 
-    const backtest = useQuery(["backtest", backtestId], () => {
-        if(!backtestId) {
-            return null;
-        }
-
-        return scannerApi.getBacktest(Number(backtestId))
-    })
+    const backtest = useFindBacktest(backtestId?+backtestId:undefined)
 
     if(backtest.isLoading) {
         return <div>loading</div>
