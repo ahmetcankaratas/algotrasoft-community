@@ -26,7 +26,7 @@ const Backtest: React.FC = () => {
         <Cover header={backtest.data?.data.name} description="Result Details" />
         {backtest.isLoading && loading}
         {backtest.data?.data && (
-          <div className="container mx-auto w-full px-6 md:max-w-2xl">
+          <div className="container mx-auto w-full px-6 md:max-w-2xl mt-[-5rem]">
             <div className="flex flex-col justify-between space-y-4 rounded-lg bg-gray-100 p-10 dark:bg-darkBlue3">
               <BarGraph
                 description="1 Month Result"

@@ -19,7 +19,7 @@ module.exports = {
         opensans: ['Open Sans', 'sans-serif'],
       },
       backgroundImage: {
-        'scanner-cover': "url('./assets/images/bg-scanner-cover.webp')",
+        'scanner-cover': "url('./assets/images/dot.png')",
       }
     },
   },
