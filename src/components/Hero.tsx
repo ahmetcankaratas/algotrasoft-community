@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
         <p className="text-xl font-bold text-gray-500 md:text-2xl">
           Join the Quantitative Revolution
         </p>
-        <a href="#collabration" className="my-6 px-8 py-2 shadow-md mx-auto w-xl rounded-md bg-darkCyan font-lg hover:scale-95">
+        <a href="#about-us" className="my-6 px-8 py-2 shadow-md mx-auto w-xl rounded-md bg-darkCyan font-lg hover:scale-95">
           Learn More
         </a>
       </div>

@@ -8,6 +8,8 @@ type AppContextProps = {
   searchQuery: string;
   filteredStocks: MarketResponseResult[] | undefined;
   setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
+  theme: string;
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
 };
 
 type AppStateProviderProps = {
@@ -22,6 +24,8 @@ export const AppStateProvider: React.FC<AppStateProviderProps> = ({
   children,
 }) => {
   const [searchQuery, setSearchQuery] = useState<string>("");
+
+  const [theme, setTheme] = useState<string>(localStorage.theme as string);
 
   const getStocks = useQuery("all-stocks", () => {
     return scannerApi.getStocks();
@@ -39,7 +43,14 @@ export const AppStateProvider: React.FC<AppStateProviderProps> = ({
 
   return (
     <AppContext.Provider
-      value={{ getStocks, searchQuery, setSearchQuery, filteredStocks }}
+      value={{
+        getStocks,
+        searchQuery,
+        setSearchQuery,
+        filteredStocks,
+        theme,
+        setTheme,
+      }}
     >
       {children}
     </AppContext.Provider>

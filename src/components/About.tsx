@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-const Collabration = () => {
+const About = () => {
   return (
     <section
-      id="collabration"
+      id="about-us"
       className="relative z-10 bg-white dark:bg-darkBlue1 h-screen flex"
     >
       <div className="container mx-auto flex flex-col items-center px-6 pt-24 pb-32 md:flex-row md:space-x-16">
@@ -43,4 +43,4 @@ const Collabration = () => {
   );
 };
 
-export default Collabration;
+export default About;

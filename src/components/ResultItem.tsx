@@ -12,7 +12,7 @@ const BacktestCard: React.FC<BacktestCardProps> = ({ id }) => {
 
   if (backtest.isLoading) {
     return (
-      <li className="flex h-28 w-full items-center justify-center rounded-lg bg-gray-100 p-4 dark:bg-darkBlue3">
+      <li className="mx-auto flex h-28 w-10/12 items-center justify-center rounded-lg bg-gray-100 p-4 dark:bg-darkBlue3">
         <Loader />
       </li>
     );
@@ -23,7 +23,7 @@ const BacktestCard: React.FC<BacktestCardProps> = ({ id }) => {
   }
 
   return (
-    <li>
+    <li className="mx-auto w-10/12">
       <Link
         to={`/scanner/${id - 1}`}
         className="pointer flex flex-row justify-between rounded-lg bg-gray-100 p-10 duration-200 hover:scale-105 dark:bg-darkBlue3"

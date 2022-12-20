@@ -26,7 +26,7 @@ const Backtest: React.FC = () => {
         <Cover header={backtest.data?.data.name} description="Result Details" />
         {backtest.isLoading && loading}
         {backtest.data?.data && (
-          <div className="container mx-auto w-full px-6 md:max-w-2xl mt-[-5rem]">
+          <div className="container mx-auto mt-[-5rem] w-full px-6 md:max-w-2xl">
             <div className="flex flex-col justify-between space-y-4 rounded-lg bg-gray-100 p-10 dark:bg-darkBlue3">
               <BarGraph
                 description="1 Month Result"
@@ -45,16 +45,14 @@ const Backtest: React.FC = () => {
                 value={backtest.data?.data.return_yearly_1}
               />
             </div>
-            <div
-              role="button"
-              className="text-md mt-5 w-20 cursor-pointer rounded-xl bg-gray-100 p-3 text-center hover:bg-darkCyan dark:hover:bg-accentCyan dark:bg-darkBlue3 md:text-lg"
+            <button
+              className="text-md mt-2 w-20 cursor-pointer rounded-xl bg-gray-100 p-3 text-center hover:bg-darkCyan dark:bg-darkBlue3 dark:hover:bg-accentCyan md:text-lg"
               onClick={goBack}
             >
               Back
-            </div>
+            </button>
           </div>
         )}
-        <h1></h1>
       </section>
     </Layout>
   );
