@@ -19,10 +19,10 @@ const Footer: React.FC = () => {
             <div className="flex flex-col space-y-3">
               <Link to="/#navbar">Home</Link>
               <Link to="/#about-us">About Us</Link>
-              <Link to="/features">Features</Link>
+              <Link to="/#features">Features</Link>
             </div>
             <div className="flex flex-col space-y-3">
-              <Link to="/scanner">Scanner</Link>
+              <Link to="/scanner#scanner">Scanner</Link>
               <Link to="/contact">Contact</Link>
             </div>
           </div>
