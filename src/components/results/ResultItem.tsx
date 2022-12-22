@@ -1,12 +1,12 @@
-import Loader from "./Loader";
+import Loader from "../UI/Loader";
 import { Link } from "react-router-dom";
-import useFindBacktest from "../hooks/useFindBacktest";
+import useFindBacktest from "../../hooks/useFindBacktest";
 
-type BacktestCardProps = {
+type BacktestProps = {
   id: number;
 };
 
-const BacktestCard: React.FC<BacktestCardProps> = ({ id }) => {
+const Item: React.FC<BacktestProps> = ({ id }) => {
   // in the firebase database, the id's start at 1, but the array index starts at 0
   const backtest = useFindBacktest(id - 1);
 
@@ -57,4 +57,4 @@ const BacktestCard: React.FC<BacktestCardProps> = ({ id }) => {
   );
 };
 
-export default BacktestCard;
+export default Item;

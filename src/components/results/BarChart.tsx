@@ -1,9 +1,9 @@
-type grapProps = {
+type barProps = {
     description: string;
     value: number;
 }
 
-const BarGraph:React.FC<grapProps>  = ({description, value}) => {
+const BarChart:React.FC<barProps>  = ({description, value}) => {
     const barColor = value < 0 ? "bg-red-500" : "bg-darkCyan";
 
     return(
@@ -29,4 +29,4 @@ const BarGraph:React.FC<grapProps>  = ({description, value}) => {
     )
 }
 
-export default BarGraph;
+export default BarChart;

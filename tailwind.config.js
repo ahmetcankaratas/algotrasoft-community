@@ -19,7 +19,8 @@ module.exports = {
         opensans: ['Open Sans', 'sans-serif'],
       },
       backgroundImage: {
-        'scanner-cover': "url('./assets/images/dot.png')",
+        'scanner-cover': "url('./assets/images/peaks.svg')",
+        'scanner-cover-light': "url('./assets/images/light-peaks.svg')"
       }
     },
   },

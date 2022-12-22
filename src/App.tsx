@@ -6,7 +6,7 @@ import { AppStateProvider } from "./states/AppState";
 
 import Home from "./pages/Home";
 import Scanner from "./pages/Scanner";
-import Backtest from "./pages/Backtest";
+import Details from "./pages/Details";
 import Contact from "./pages/Contact";
 
 const queryClient = new QueryClient();
@@ -18,7 +18,7 @@ function App(): React.ReactElement {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/scanner" element={<Scanner />} />
-            <Route path="/scanner/:backtest" element={<Backtest />} />
+            <Route path="/scanner/:backtest" element={<Details />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </BrowserRouter>

@@ -1,11 +1,10 @@
 import React from "react";
 import Typed from "react-typed";
-import Particle from "./Particle";
 
 const Hero: React.FC = () => {
   return (
     <section id="hero">
-      <div className="container mx-auto mt-[-96px] flex h-screen w-full max-w-4xl flex-col justify-center text-center">
+      <div className="container mx-auto mt-[-6rem] flex h-screen w-full max-w-4xl flex-col justify-center text-center">
         <p className="p-2 font-bold text-darkCyan">ALGOTRASOFT</p>
         <h1 className="text-4xl font-bold sm:text-6xl md:py-6">
           THE NEXT GENERATION

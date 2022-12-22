@@ -1,7 +1,7 @@
 import { HashLink as Link} from 'react-router-hash-link'
 const Footer: React.FC = () => {
   return (
-    <div className="bg-darkBlue2 text-white">
+    <div className="bg-darkBlue2 text-white relative z-10">
       <div className="container mx-auto px-5 pt-12 pb-10">
         <div className="flex flex-col justify-between space-y-24 md:flex-row md:space-y-0">
           <div className="flex items-center space-x-3">
@@ -16,12 +16,12 @@ const Footer: React.FC = () => {
           </div>
 
           <div className="flex flex-col space-y-10 text-xl md:flex-row md:space-x-20 md:space-y-0 md:text-base">
-            <div className="flex flex-col space-y-3">
+            <div className="flex flex-col space-y-3 f-nav">
               <Link to="/#navbar">Home</Link>
               <Link to="/#about-us">About Us</Link>
-              <Link to="/#features">Features</Link>
+              <Link to="/#work">How We Work</Link>
             </div>
-            <div className="flex flex-col space-y-3">
+            <div className="flex flex-col space-y-3 f-nav">
               <Link to="/scanner#scanner">Scanner</Link>
               <Link to="/contact">Contact</Link>
             </div>
