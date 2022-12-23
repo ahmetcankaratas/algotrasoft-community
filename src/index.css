@@ -8,3 +8,8 @@
       color:  #202a3c,
   }
   
+  #navbar a.active {
+    color: hsl(161, 100%, 44%);
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }

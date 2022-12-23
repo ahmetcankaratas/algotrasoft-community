@@ -20,6 +20,7 @@ function App(): React.ReactElement {
             <Route path="/scanner" element={<Scanner />} />
             <Route path="/scanner/:backtest" element={<Details />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<Home />} />
           </Routes>
         </BrowserRouter>
       </AppStateProvider>

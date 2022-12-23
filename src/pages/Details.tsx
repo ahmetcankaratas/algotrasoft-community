@@ -7,12 +7,23 @@ import ResultDetails from "../components/results/ResultDetails";
 const Details: React.FC = () => {
   const { backtest: backtestId } = useParams();
   const backtest = useFindBacktest(backtestId ? +backtestId : undefined);
+  
 
   const loading = (
     <div className="flex h-28 w-full items-center justify-center rounded-lg bg-gray-100 p-4 dark:bg-darkBlue3">
       <Loader />
     </div>
   );
+
+  if(backtest.data?.data == null){
+    return(
+      <Layout>
+        <section id="result" className="bg-gray-50 dark:bg-darkBlue">
+          <Cover header="Not Found" description=""/>
+        </section>
+      </Layout>
+    )
+  }
 
   return (
     <Layout>

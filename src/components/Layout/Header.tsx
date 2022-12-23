@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import useDarkSide from "../../hooks/useDarkSide";
 const Header: React.FC = () => {
   const [colorTheme, setTheme] = useDarkSide();
@@ -10,15 +10,15 @@ const Header: React.FC = () => {
   return (
     <header id="navbar" className="container mx-auto mt-10 h-40 px-6 text-center md:h-20">
       <div className="top-12 right-12 flex items-center justify-center space-x-4 md:absolute md:space-x-10">
-        <Link to="/" className="tracking-widest  hover:text-accentCyan">
+        <NavLink end to="/" className="tracking-widest  hover:text-accentCyan">
           Home
-        </Link>
-        <Link to="/scanner" className="tracking-widest  hover:text-accentCyan">
+        </NavLink>
+        <NavLink to="/scanner" className="tracking-widest  hover:text-accentCyan">
           Scanner
-        </Link>
-        <Link to="/contact" className="tracking-widest  hover:text-accentCyan">
+        </NavLink>
+        <NavLink to="/contact" className="tracking-widest  hover:text-accentCyan">
           Contact
-        </Link>
+        </NavLink>
 
         <button
           id="theme-toggle"
