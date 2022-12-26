@@ -3,9 +3,9 @@ import { MarketResponseResult } from "../../@types/api";
 
 import Item from "./ResultItem";
 import { useApp } from "../../states/AppState";
+import ErrorBoundary from "../ErrorBoundaries";
 const Scanner: React.FC = () => {
   const { getStocks, filteredStocks } = useApp();
-
 
   return (
     <ul className="mt-8 flex max-h-screen w-full flex-col space-y-8 overflow-y-scroll scrollbar scrollbar-track-gray-300 scrollbar-thumb-darkCyan dark:scrollbar-track-white">

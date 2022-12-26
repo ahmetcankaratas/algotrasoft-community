@@ -28,7 +28,7 @@ const Work: React.FC = () => {
             <p className="max-w-md">
               Join our bi-weekly Sunday coding sessions where you will be
               introduced to mathematical concepts behind algorithmic trading,
-              learn basic trading strategies, and how to implement them in code.
+              learn basic trading strategies, and how to implement them in code.
             </p>
           </div>
         </div>

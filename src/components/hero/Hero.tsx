@@ -1,5 +1,5 @@
 import React from "react";
-import Typed from "react-typed";
+import Typewriter from "typewriter-effect";
 
 const Hero: React.FC = () => {
   return (
@@ -13,18 +13,23 @@ const Hero: React.FC = () => {
           <p className="py-4 text-xl font-bold sm:text-4xl md:text-5xl">
             Algorithmic Trading for
           </p>
-          <Typed
-            className="pl-2 text-xl font-bold text-darkCyan sm:text-4xl md:pl-4 md:text-5xl"
-            strings={["Stocks", "Crypto", "Forex", "NFTs"]}
-            typeSpeed={120}
-            backSpeed={140}
-            loop
-          />
+          <div className="pl-2 text-xl font-bold text-darkCyan sm:text-4xl md:pl-4 md:text-5xl">
+            <Typewriter
+              options={{
+                strings: ["Stocks", "Crypto", "Forex", "NFTs"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </div>
         </div>
         <p className="text-xl font-bold text-gray-500 md:text-2xl">
           Join the Quantitative Revolution
         </p>
-        <a href="#about-us" className="my-6 px-8 py-2 shadow-md mx-auto w-xl rounded-md bg-darkCyan font-lg hover:scale-95">
+        <a
+          href="#about-us"
+          className="w-xl font-lg my-6 mx-auto rounded-md bg-darkCyan px-8 py-2 shadow-md hover:scale-95"
+        >
           Learn More
         </a>
       </div>

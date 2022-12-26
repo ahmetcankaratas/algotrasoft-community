@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router";
 import BarGraph from "./BarChart";
-import {BacktestResponseResult} from "../types";
+import {BacktestResponseResult} from "../../@types/api";
 
 const Details: React.FC<BacktestResponseResult> = ({data}) => {
   const navigate = useNavigate();

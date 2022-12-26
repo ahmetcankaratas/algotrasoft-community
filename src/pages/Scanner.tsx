@@ -3,7 +3,7 @@ import { useApp } from "../states/AppState";
 import Loader from "../components/UI/Loader";
 import Search from "../components/results/Search";
 import Cover from "../components/UI/Cover";
-import List from "../components/results/ResultList";
+import ResultList from "../components/results/ResultList";
 const Scanner: React.FC = () => {
   const { getStocks, filteredStocks } = useApp();
 
@@ -22,7 +22,7 @@ const Scanner: React.FC = () => {
         />
         <div className="container mx-auto px-6 pt-12 pb-20 md:pb-24">
           {getStocks.isLoading ? loading : <Search />}
-          <List />
+          <ResultList />
         </div>
       </section>
     </Layout>

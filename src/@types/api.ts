@@ -10,7 +10,6 @@ export type MarketResponse = {
     }
 }
 
-
 export type BacktestResponseResult = {
     data:{
         "id":number,
@@ -25,6 +24,5 @@ export type BacktestResponseResult = {
         "return_monthly_6":number,
         "return_yearly_1":number
     }
-
 }
 

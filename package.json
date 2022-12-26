@@ -12,8 +12,8 @@
     "react-router-hash-link": "^2.4.3",
     "react-toggle-dark-mode": "^1.1.1",
     "react-tsparticles": "^2.6.0",
-    "react-typed": "^1.2.0",
-    "tsparticles": "^2.6.0"
+    "tsparticles": "^2.6.0",
+    "typewriter-effect": "^2.19.0"
   },
   "scripts": {
     "dev": "vite",

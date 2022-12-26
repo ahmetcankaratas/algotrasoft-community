@@ -32,10 +32,14 @@ export const AppStateProvider: React.FC<AppStateProviderProps> = ({
   });
 
   const filteredStocks = useMemo(() => {
+    if (getStocks.data?.data == null) {
+      return [];
+    }
+
     if (searchQuery === "") {
       return getStocks.data?.data.stocks;
     }
-    //console.log(searchQuery)
+
     return getStocks.data?.data.stocks.filter((stock) => {
       return stock.name.toLowerCase().includes(searchQuery.toLowerCase());
     });

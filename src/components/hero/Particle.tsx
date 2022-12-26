@@ -1,8 +1,7 @@
 import { useCallback } from "react";
-import type { Container, Engine } from "tsparticles-engine";
+import type { Engine } from "tsparticles-engine";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
-import useDarkSide from "../../hooks/useDarkSide";
 
 const Particle = (props: any) => {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -11,11 +10,12 @@ const Particle = (props: any) => {
 
   return (
     <Particles
+      className="pointer-events-none absolute inset-0 min-h-screen bg-transparent"
       id="tsparticles"
       init={particlesInit}
       options={{
         fullScreen: {
-          enable: true,
+          enable: false,
           zIndex: 1,
         },
         particles: {
