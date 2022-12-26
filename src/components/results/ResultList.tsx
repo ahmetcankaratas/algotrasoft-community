@@ -1,9 +1,8 @@
 import { InView } from "react-intersection-observer";
-import { MarketResponseResult } from "../../@types/api";
 
+import { MarketResponseResult } from "../../@types/api";
 import Item from "./ResultItem";
 import { useApp } from "../../states/AppState";
-import ErrorBoundary from "../ErrorBoundaries";
 const Scanner: React.FC = () => {
   const { getStocks, filteredStocks } = useApp();
 
