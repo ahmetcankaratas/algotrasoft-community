@@ -5,6 +5,7 @@ import Layout from "../components/layout/Layout";
 import Cover from "../components/UI/Cover";
 import ResultDetails from "../components/results/details/ResultDetails";
 import BackButton from "../components/UI/BackButton";
+import NotFound from "./NotFound";
 const Details: React.FC = () => {
   const { backtest: backtestId } = useParams();
   const backtest = useFindBacktest(backtestId ? +backtestId : undefined);
@@ -16,14 +17,7 @@ const Details: React.FC = () => {
   );
 
   if (backtest.data?.data == null) {
-    return (
-      <Layout>
-        <section id="result" className="bg-gray-50 dark:bg-darkBlue">
-          <Cover header="Not Found" description="" />
-          <BackButton />
-        </section>
-      </Layout>
-    );
+    return <NotFound />;
   }
 
   return (
