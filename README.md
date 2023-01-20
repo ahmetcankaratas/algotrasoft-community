@@ -4,6 +4,14 @@ On the homepage, users can find a wealth of information about the community and 
 
 LiveURL: https://algotrasoft-can.surge.sh/
 
+<hr>
+<div align="center">
+This app is also developed on Angular with tailwind. Click the link below to view.
+
+<b>Angular Version:</b> https://github.com/ahmetcankaratas/algotrasoft-community-angular
+</div>
+<hr>
+
 ## **🔎 Technologies**
 
 - ReactJS
